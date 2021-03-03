@@ -1,0 +1,32 @@
+{
+  "APPLICATION": {
+    "Name": "GOFER SKELETON",
+    "Description": "How easy it can be!"
+  },
+  "COMMON": {
+    "Login": "Login",
+    "Password": "Password",
+    "ErrLoginRequired": "Login is required",
+    "ErrPasswordRequired": "Password is required",
+    "ErrPasswordLength": "Password must be at most 7 characters long",
+    "Privacy": "To login with the test-account please enter<br/>Login: admin<br/>Password:admin123",
+    "Impress": "<a target=\"_blank\" href=\"#\">Impressum</a>"
+  },
+  "GRID": {
+    "Add": "Add",
+    "NoData": "No Data",
+    "LoadingData": "Loading data...",
+    "RowsPerPage": "Rows per page",
+    "XofY": "of",
+    "Export": "Export",
+    "ItemDeleted": "Item got deleted",
+    "DeleteItem": "Are you sure you want to delete this item?",
+    "Back": "Back",
+    "Save": "Save",
+    "ItemSaved": "Item got saved",
+    "NoChanges": "The form has no changes",
+    "NotValid": "The form is not valid",
+    "Uploaded": "File is uploaded!"
+  }
+}
+

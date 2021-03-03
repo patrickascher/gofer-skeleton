@@ -1,0 +1,52 @@
+{
+  "auth": {
+    "providers": {
+      "native": {"a": "b"}
+    },
+    "jwt": {
+      "Alg": "HS256",
+      "Issuer": "gofer-skeleton",
+      "Audience": "user",
+      "Subject": "app-access",
+      "SignKey": "secret"
+    },
+    "bcryptCost": 12,
+    "allowedFailedLogins": 5,
+    "lockDuration": "PT15M",
+    "inactiveDuration": "P3M",
+    "tokenDuration": "PT1M",
+    "refreshTokenDuration": "P1M"
+  },
+  "databases": [
+    {
+      "provider": "mysql",
+      "host": "mysql",
+      "port": 3306,
+      "username": "root",
+      "password": "toor",
+      "database": "app",
+      "maxOpenConnections": 5,
+      "maxIdleConnections": 2,
+      "maxConnLifetime": 0,
+      "debug": true,
+      "preQuery": ""
+    }
+  ],
+  "server": {
+    "domain": "localhost:8080",
+    "language": "en",
+    "timeZone": "Europe/Vienna",
+    "httpPort": 8070
+  },
+  "router": {
+    "provider": "jsrouter",
+    "favicon": "favicon.ico",
+    "CreateDBRoutes": true
+  },
+  "caches": [
+    {
+      "provider": "memory",
+      "cycle": 360
+    }
+  ]
+}

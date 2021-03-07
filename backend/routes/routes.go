@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/patrickascher/gofer-skeleton/backend/controller"
 	"github.com/patrickascher/gofer/auth"
+	"github.com/patrickascher/gofer/locale"
 	"github.com/patrickascher/gofer/router"
 	"github.com/patrickascher/gofer/router/middleware"
 	"github.com/patrickascher/gofer/router/middleware/jwt"
@@ -54,13 +55,18 @@ func RegisterRoutes() error {
 	}
 
 	// add routes
-	t := controller.TestController{}
-	err = r.AddPublicRoute(router.NewRoute("/test/*grid", &t, router.NewMapping(nil, t.Test, nil)))
+	testController := controller.TestController{}
+	err = r.AddSecureRoute(router.NewRoute("/test/*grid", &testController, router.NewMapping(nil, testController.Test, nil)))
 	if err != nil {
 		return err
 	}
 
 	err = auth.AddRoutes(r)
+	if err != nil {
+		return err
+	}
+
+	err = locale.AddRoutes(r)
 	if err != nil {
 		return err
 	}

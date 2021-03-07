@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "gofer-vue": "^1.0.13",
+    "gofer-vue": "^1.0.16",
     "vue": "^2.6.11",
     "vue-i18n": "^8.22.4",
     "vue-meta": "^2.4.0",
@@ -24,6 +24,7 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^5.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.32.0",

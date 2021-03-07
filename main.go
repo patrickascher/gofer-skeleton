@@ -3,11 +3,14 @@ package main
 import (
 	"github.com/patrickascher/gofer-skeleton/backend"
 	"github.com/patrickascher/gofer-skeleton/backend/routes"
+	_ "github.com/patrickascher/gofer-skeleton/backend/translation"
 	_ "github.com/patrickascher/gofer/auth/native"
 	"github.com/patrickascher/gofer/config"
 	"github.com/patrickascher/gofer/config/viper"
+	_ "github.com/patrickascher/gofer/locale/translation/db"
 	_ "github.com/patrickascher/gofer/query/mysql"
 	_ "github.com/patrickascher/gofer/router/jsrouter"
+
 	"github.com/patrickascher/gofer/server"
 )
 

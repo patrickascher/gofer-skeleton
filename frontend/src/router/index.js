@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import {DashLayout, GridLayout, LoginLayout, UserService} from 'gofer-vue'
+import {DashLayout, GridLayout, LoginLayout, TranslationView, UserService} from 'gofer-vue'
+
 
 Vue.use(VueRouter)
 
@@ -84,6 +85,23 @@ const routes = [
                 ]
             },
             {
+                path: 'translation',
+                component: TranslationView,
+                name: 'Dashboard Translation',
+                meta: {description: 'Overview of environment', api: '/settings/translation'},
+                children: [
+                    {
+                        path: '*',
+                        component: TranslationView,
+                        name: '',
+                        meta: {
+                            description: 'Overview of environment',
+                            api: '/settings/translation'
+                        }
+                    }
+                ]
+            },
+            {
                 path: 'test',
                 component: GridLayout,
                 name: 'Dashboard test',
@@ -111,6 +129,14 @@ const router = new VueRouter({
 })
 
 export default router
+/*
+router.beforeEach((to, from, next) => {
+    const lang = to.params.lang
+    I18nService.loadLanguageAsync(lang, false).then(() => next()).catch(() => {
+        Store.commit('alert/' + StoreAlert.ERROR, "Translation could not be found!");
+        next();
+    });
+})*/
 
 router.beforeEach((to, from, next) => {
 

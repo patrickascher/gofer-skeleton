@@ -1,7 +1,9 @@
 {
   "auth": {
     "providers": {
-      "native": {"a": "b"}
+      "native": {
+        "a": "b"
+      }
     },
     "jwt": {
       "Alg": "HS256",
@@ -34,14 +36,20 @@
   ],
   "server": {
     "domain": "localhost:8080",
-    "language": "en",
-    "timeZone": "Europe/Vienna",
-    "httpPort": 8070
+    "httpPort": 8070,
+    "translation": {
+      "provider": "db",
+      "config": {
+        "controller": true,
+        "defaultLanguage": "en",
+        "jsonFilePath": "./frontend/src/assets/lang"
+      }
+    }
   },
   "router": {
     "provider": "jsrouter",
     "favicon": "favicon.ico",
-    "CreateDBRoutes": true
+    "createDBRoutes": true
   },
   "caches": [
     {
